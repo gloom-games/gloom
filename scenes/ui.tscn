@@ -1,0 +1,14 @@
+[gd_scene format=2]
+
+[node name="UI" type="Node2D"]
+
+[node name="Keyboard" type="Label" parent="."]
+margin_left = 358.889
+margin_top = 567.467
+margin_right = 535.889
+margin_bottom = 598.467
+text = "as;kas;kas;lk;alsk;slak;lsak;s
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}

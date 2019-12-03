@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/character.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/keyboard.gd" type="Script" id=3]
+[ext_resource path="res://scenes/ui.tscn" type="PackedScene" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 443.06, 23.7203 )
+
+[node name="World" type="Node2D"]
+
+[node name="Keyboard" type="Node" parent="."]
+script = ExtResource( 3 )
+time_delay = 5.0
+player_path = NodePath("../Character")
+hud_path = NodePath("../UI")
+
+[node name="UI" parent="." instance=ExtResource( 4 )]
+
+[node name="Character" parent="." instance=ExtResource( 1 )]
+position = Vector2( 216, 153 )
+
+[node name="floor" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
+position = Vector2( 440.801, 582.668 )
+shape = SubResource( 1 )
